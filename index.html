@@ -4,97 +4,112 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BrandZone Header</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pb3Yj+7+gwYdIuC3g4uV4pbh5vJq4k4Z9W5bC9kFJX+G5pI9pP5HbK1QH+2/SpZQ5bX8W2P5YqzN6yB7R6y3zA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Outfit', sans-serif;
+      background: #000;
     }
 
     header {
-      position: fixed;
+      position: sticky;
       top: 0;
-      left: 0;
       width: 100%;
       z-index: 9999;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      padding: 12px 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 32px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.05));
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
-    .social-icons a {
-      margin-right: 18px;
-      color: white;
-      font-size: 18px;
+    .social-icons,
+    .menu-items,
+    .cta-button {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .social-icons a svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
       transition: all 0.3s ease;
     }
 
-    .social-icons a:hover {
-      transform: scale(1.3);
-      filter: drop-shadow(0 0 5px white);
+    .social-icons a:hover svg {
+      transform: scale(1.4);
+      filter: drop-shadow(0 0 8px white);
     }
 
-    .logo img {
-      height: 40px;
+    .logo {
+      height: 48px;
       filter: invert(1);
     }
 
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
+    .menu-items a {
       color: white;
-      font-weight: 500;
-      transition: 0.2s;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      transition: all 0.3s ease;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .menu-items a:hover {
+      text-shadow: 0px 0px 5px white;
     }
 
-    .cta {
-      margin-left: 24px;
-      padding: 10px 22px;
+    .cta-button a {
       background: white;
       color: black;
-      border: none;
+      padding: 10px 20px;
       border-radius: 999px;
-      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
       font-weight: 900;
-      cursor: pointer;
-      transition: 0.3s;
+      font-size: 14px;
+      transition: all 0.3s ease;
     }
 
-    .cta:hover {
-      background: #f0f0f0;
+    .cta-button a:hover {
+      transform: scale(1.05);
+      background: #eee;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="social-icons">
-      <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="#" aria-label="TikTok">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 209.3v125.8c0 13.3-10.8 24-24 24h-72.2c-13.3 0-24-10.8-24-24V209.3H256v125.8c0 13.3-10.8 24-24 24h-72.2c-13.3 0-24-10.8-24-24V209.3H64v125.8c0 13.3-10.8 24-24 24H0v-260C0 63.3 39.3 24 88 24h320c48.7 0 88 39.3 88 88v97.3h-48z"/></svg>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224,202a53,53 0 1,0 53,53a53,53 0 0,0 -53,-53Zm124.7-41a54.5,54.5 0 0,0 -30.7,-30.7c-21.2-8.4-71.6-6.5-96,0a54.5,54.5 0 0,0 -30.7,30.7c-8.4,21.2-6.5,71.6,0,96a54.5,54.5 0 0,0 30.7,30.7c21.2,8.4 71.6,6.5 96,0a54.5,54.5 0 0,0 30.7,-30.7c8.4,-21.2 6.5,-71.6 0,-96ZM224,338a114,114 0 1,1 114,-114a114,114 0 0,1 -114,114Zm150-114a24,24 0 1,1 24,-24a24,24 0 0,1 -24,24Z"/></svg>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06H293V6.26S266.42 0 240.39 0c-73.61 0-121.17 44.38-121.17 124.72v70.62H80v92.66h39.22V512h96.49V288z"/></svg>
+      </a>
+      <a href="#" aria-label="YouTube">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.8-24.9-42.5-48.6-48.8C457.2 64 288 64 288 64s-169.2 0-213.1 11.3c-23.8 6.3-42.5 25-48.8 48.8C16.8 168 16.8 256 16.8 256s0 88 9.3 131.9c6.3 23.8 25 42.5 48.8 48.8C118.8 448 288 448 288 448s169.2 0 213.1-11.3c23.8-6.3 42.5-25 48.8-48.8 9.3-43.9 9.3-131.9 9.3-131.9s0-88-9.3-131.9zM232 334V178l142 78-142 78z"/></svg>
+      </a>
     </div>
 
     <div class="logo">
-      <img src="logo.png" alt="BrandZone Logo">
+      <img src="logo.png" alt="BrandZone logo" class="logo" />
     </div>
 
-    <div class="menu">
-      <nav>
-        <a href="#rolunk">Rólunk</a>
-        <a href="#szolgaltatasok">Szolgáltatások</a>
-        <a href="#referenciak">Referenciák</a>
-        <button class="cta">ÁRAJÁNLAT</button>
-      </nav>
+    <div class="menu-items">
+      <a href="#rolunk">Rólunk</a>
+      <a href="#szolgaltatasok">Szolgáltatások</a>
+      <a href="#referenciak">Referenciák</a>
+    </div>
+
+    <div class="cta-button">
+      <a href="#arajanlat">Árajánlat most</a>
     </div>
   </header>
 </body>
