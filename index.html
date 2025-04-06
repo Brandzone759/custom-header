@@ -3,112 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brandzone Header</title>
+  <title>Custom Header</title>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
       font-family: Arial, sans-serif;
-      background: #000;
     }
 
-    @media (min-width: 769px) {
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      width: 100%;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 48px;
+      height: 56px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      text-shadow: 0 0 6px rgba(0,0,0,0.6);
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff5c5c;
+    }
+
+    .cta-button {
+      padding: 8px 16px;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px white;
+    }
+
+    @media (max-width: 1024px) {
       header {
-        position: sticky;
-        top: 0;
-        z-index: 9999;
-        width: 100%;
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0,0,0,0));
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        padding: 12px 48px;
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        align-items: center;
-        transition: all 0.3s ease;
-      }
-
-      .social-icons {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .social-icons a {
-        display: inline-block;
-        transition: transform 0.3s ease, filter 0.3s ease;
-      }
-
-      .social-icons img {
-        width: 24px;
-        height: 24px;
-        filter: brightness(0) invert(1);
-      }
-
-      .social-icons a:hover img {
-        transform: scale(1.2);
-        filter: drop-shadow(0 0 6px white);
-      }
-
-      .logo {
-        justify-self: center;
-        font-size: 20px;
-        font-weight: bold;
-        color: #fff;
-        text-transform: uppercase;
-      }
-
-      nav {
-        display: flex;
-        justify-content: flex-end;
-        gap: 32px;
-      }
-
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        text-shadow: 0 0 8px rgba(0,0,0,0.7);
-      }
-
-      .cta {
-        padding: 10px 20px;
-        background: transparent;
-        border: 2px solid white;
-        color: white;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .cta:hover {
-        background: white;
-        color: black;
+        display: none;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="social-icons">
-      <a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-      <a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
-    </div>
     <div class="logo">BRANDZONE</div>
     <nav>
-      <a href="#rolunk">Rólunk</a>
-      <a href="#szolgaltatasok">Szolgáltatások</a>
-      <a href="#referenciak">Referenciák</a>
-      <button class="cta">Árajánlat</button>
+      <ul>
+        <li><a href="#rolunk">Rólunk</a></li>
+        <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="#referenciak">Referenciák</a></li>
+      </ul>
     </nav>
+    <button class="cta-button">Árajánlat</button>
   </header>
 </body>
 </html>
