@@ -29,7 +29,24 @@
       padding: 12px 48px;
       height: 56px;
     }
-
+.social-icons {
+      display: flex;
+      gap: 20px;
+    }
+    .social-icons a {
+      display: inline-block;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 6px white);
+    }
+    .social-icons img {
+      height: 22px;
+      width: 22px;
+      filter: brightness(100);
+    }
+    
    .logo {
       height: 60px;
       filter: invert(1);
