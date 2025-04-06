@@ -1,24 +1,9 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="hu">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Custom Header</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="glass-header">
-    <!-- ide jön a logó + menü + CTA + social ikonok -->
-  </header>
-</body>
-</html>
-
-<html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Header</title>
+  <title>BrandZone Header</title>
   <style>
     * {
       box-sizing: border-box;
@@ -27,7 +12,8 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      background-color: transparent;
     }
 
     header {
@@ -37,35 +23,40 @@
       width: 100%;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 12px 48px;
-      height: 56px;
+      height: 64px;
     }
-.social-icons {
+
+    .social-icons {
       display: flex;
       gap: 20px;
     }
+
     .social-icons a {
       display: inline-block;
       transition: transform 0.3s ease, filter 0.3s ease;
     }
+
     .social-icons a:hover {
       transform: scale(1.2);
       filter: drop-shadow(0 0 6px white);
     }
+
     .social-icons img {
       height: 22px;
       width: 22px;
       filter: brightness(100);
     }
-    
-   .logo {
-      height: 30px;
+
+    .logo {
+      height: 36px;
       filter: invert(1);
- }
+    }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -77,21 +68,22 @@
       color: white;
       font-weight: 500;
       text-shadow: 0 0 6px rgba(0,0,0,0.6);
-      transition: color 0.3s;
+      transition: all 0.3s;
     }
 
     nav ul li a:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
       filter: drop-shadow(0 0 6px white);
     }
 
     .cta-button {
-      padding: 10px 16px;
+      padding: 10px 20px;
       background-color: white;
       color: black;
-      font-weight: bold;
+      font-family: 'Montserrat Black', sans-serif;
+      font-weight: 900;
       border: none;
-      border-radius: 7px;
+      border-radius: 999px;
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -110,8 +102,15 @@
 </head>
 <body>
   <header>
+    <div class="social-icons">
+      <a href="https://www.tiktok.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+      <a href="https://www.youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
     </div>
-<img src="brandzone.png" alt="BrandZone Logo" class="logo">
+
+    <img src="brandzone.png" alt="BrandZone Logo" class="logo">
+
     <nav>
       <ul>
         <li><a href="#rolunk">Rólunk</a></li>
@@ -119,7 +118,8 @@
         <li><a href="#referenciak">Referenciák</a></li>
       </ul>
     </nav>
-    <button class="cta-button">Árajánlat</button>
+
+    <button class="cta-button">ÁRAJÁNLAT</button>
   </header>
 </body>
 </html>
